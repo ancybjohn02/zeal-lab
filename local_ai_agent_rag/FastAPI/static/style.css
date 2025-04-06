@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+    font-family: 'Pacifico', cursive;
+    background: linear-gradient(120deg, #800020 40%, #fdf5e6 100%);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.chat-container {
+    background-color: #fffaf0;
+    border-radius: 25px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    padding: 40px;
+    width: 420px;
+    text-align: center;
+    animation: popIn 0.9s ease;
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #800020;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"] {
+    width: 90%;
+    padding: 10px 15px;
+    border: 2px solid #800020;
+    border-radius: 15px;
+    font-size: 1.2em;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    transition: all 0.3s ease;
+    background-color: #fdf5e6;
+    color: #800020;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #b22222;
+    box-shadow: 0 0 8px #b22222;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 30px;
+    background-color: #800020;
+    color: #fffaf0;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.3em;
+    font-family: 'Pacifico', cursive;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #a52a2a;
+    transform: scale(1.05);
+}
+
+.response-box {
+    margin-top: 30px;
+    font-size: 1.4em;
+    color: #4b0082;
+    animation: slideUp 0.5s ease-in-out;
+    min-height: 40px;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(15px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.chat-box {
+    margin-top: 30px;
+    max-height: 300px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    text-align: left;
+}
+
+.message {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    animation: slideUp 0.5s ease-in-out;
+}
+
+.user-msg {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.message img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #800020;
+}
+
+.bubble {
+    background-color: #fff0f5;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 1.2em;
+    font-family: 'Pacifico', cursive;
+    color: #4b0082;
+    max-width: 75%;
+    word-wrap: break-word;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.bot-msg .bubble {
+    background-color: #fdf5e6;
+    color: #800020;
+}
