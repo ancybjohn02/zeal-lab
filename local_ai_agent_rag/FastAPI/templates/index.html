@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zeal</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="chat-container">
+        <h1>🌟 Ask Me Anything!</h1>
+        <form id="chat-form">
+            <input type="text" id="question" placeholder="Your magical question..." required />
+            <button type="submit">✨ Ask</button>
+        </form>
+
+        <!-- New chat box instead of response -->
+        <div id="chat-box" class="chat-box">
+            <div class="message bot-msg">
+                <img src="/static/bot.png" alt="Bot">
+                <div class="bubble">💭 Waiting for your question...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById("chat-form");
+        const questionInput = document.getElementById("question");
+        const chatBox = document.getElementById("chat-box");
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const question = questionInput.value;
+
+            // Append user message
+            chatBox.innerHTML += `
+                <div class="message user-msg">
+                    <img src="/static/user.png" alt="You">
+                    <div class="bubble">${question}</div>
+                </div>
+            `;
+            chatBox.scrollTop = chatBox.scrollHeight;
+            questionInput.value = "";
+
+            // Show thinking message
+            chatBox.innerHTML += `
+                <div class="message bot-msg typing" id="thinking">
+                    <img src="/static/bot.png" alt="Bot">
+                    <div class="bubble">⏳ Thinking...</div>
+                </div>
+            `;
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+            const res = await fetch("/chat", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ question })
+            });
+            const data = await res.json();
+
+            // Replace typing bubble with response
+            document.getElementById("thinking").outerHTML = `
+                <div class="message bot-msg">
+                    <img src="/static/bot.png" alt="Bot">
+                    <div class="bubble">🧠 ${data.response}</div>
+                </div>
+            `;
+            chatBox.scrollTop = chatBox.scrollHeight;
+        });
+    </script>
+</body>
+</html>
