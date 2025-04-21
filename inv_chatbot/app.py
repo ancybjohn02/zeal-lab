@@ -22,7 +22,7 @@ class QueryRequest(BaseModel):
     query: str
 
 # Load the knowledge base
-json_path = os.path.join(os.path.dirname(__file__), "knowledge_base.json")
+json_path = os.path.join(os.path.dirname(__file__), "enhanced_knowledge_base.json")
 with open(json_path, "r") as file:
     knowledge_base = json.load(file)
 
