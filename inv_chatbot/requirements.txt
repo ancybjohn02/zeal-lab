@@ -9,3 +9,4 @@ pydantic
 faiss-cpu
 httpx
 sentence-transformers
+hf_xet
