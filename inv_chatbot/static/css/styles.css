@@ -1,0 +1,126 @@
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 16px; /* Increased base font size for readability */
+}
+
+/* Container styling */
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chatbox layout */
+.chatbox {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Chat box content area */
+.chat-box-content {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    height: 300px;
+    border-bottom: 1px solid #ddd;
+    scroll-behavior: smooth;
+    font-size: 16px; /* Ensure text size matches body for consistency */
+}
+
+/* User input section */
+.user-input {
+    display: flex;
+    padding: 15px;
+    background-color: #fafafa;
+    justify-content: space-between; /* Better alignment of input and button */
+}
+
+/* Input field styling */
+#query-input {
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px; /* Slightly larger font size for better clarity */
+}
+
+/* Send button styling */
+#send-btn {
+    width: 18%;
+    padding: 12px;
+    margin-left: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+/* Send button hover effect */
+#send-btn:hover {
+    background-color: #45a049;
+}
+
+/* Styling for messages */
+.bot-message, .user-message {
+    margin-bottom: 20px; /* Increased bottom margin for better spacing */
+    max-width: 80%;
+    padding: 12px;
+    border-radius: 5px;
+    word-wrap: break-word;
+    font-size: 14px; /* Consistent text size */
+}
+
+/* Bot message styling */
+.bot-message {
+    background-color: #050000;
+    align-self: flex-start;
+}
+
+/* User message styling */
+.user-message {
+    background-color: #000000; 
+    color: white;
+    align-self: flex-end;
+}
+
+/* Input field focus style */
+#query-input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    transition: border-color 0.3s ease; /* Smooth border transition */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 90%; /* Adjust width on smaller screens */
+    }
+    #query-input {
+        width: 70%; /* Make input field larger on smaller screens */
+    }
+    #send-btn {
+        width: 28%; /* Adjust button size */
+    }
+}
