@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        /* Add some styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 400px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        #chat-box-content {
+            max-height: 300px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+        }
+        .user-message {
+            text-align: right;
+            color: blue;
+        }
+        .bot-message {
+            text-align: left;
+            color: green;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="chat-box-content"></div> <!-- The chatbox content -->
+    <input type="text" id="query-input" placeholder="Type your message here...">
+    <button id="send-btn">Send</button>
+</div>
+
+<script>
+// Your JavaScript code
+document.getElementById("send-btn").addEventListener("click", async function() {
+    const queryInput = document.getElementById("query-input");
+    const query = queryInput.value.trim();
+    
+    if (!query) return;
+    
+    // Append the user's message to the chatbox
+    appendMessage(query, "user-message");
+
+    // Clear the input field
+    queryInput.value = "";
+
+    // Send the query to the FastAPI backend
+    try {
+        const response = await fetch('http://127.0.0.1:8000/chat', { // Correct API URL
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ query: query })
+        });
+
+        const data = await response.json();
+
+        // Get the chatbot's response
+        const botResponse = data.response;
+
+        // Append the bot's response to the chatbox
+        appendMessage(botResponse, "bot-message");
+    } catch (error) {
+        appendMessage("Sorry, something went wrong. Please try again later.", "bot-message");
+    }
+});
+
+function appendMessage(message, messageType) {
+    const chatBoxContent = document.getElementById("chat-box-content");
+    
+    const messageElement = document.createElement("div");
+    messageElement.classList.add(messageType);
+    messageElement.textContent = message;
+
+    chatBoxContent.appendChild(messageElement);
+
+    // Scroll to the bottom of the chatbox
+    chatBoxContent.scrollTop = chatBoxContent.scrollHeight;
+}
+</script>
+
+</body>
+</html>
