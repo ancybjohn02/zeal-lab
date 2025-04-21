@@ -11,6 +11,8 @@ import logging
 from sentence_transformers import SentenceTransformer
 from fastapi.middleware.cors import CORSMiddleware
 
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
 app = FastAPI()
 
 # Add middleware for CORS if needed
