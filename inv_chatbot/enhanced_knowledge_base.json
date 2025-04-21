@@ -1,0 +1,934 @@
+{
+    "NYC-001": {
+        "total_stock": 5869,
+        "avg_product_rate": 464.5,
+        "total_rate": 2791592.12,
+        "categories": {
+            "grocery": {
+                "total_stock": 1037,
+                "avg_product_rate": 489.84,
+                "total_rate": 564269.3,
+                "content": "Category grocery: Total stock: 1037, Average product rate: 489.8379999999999, Total rate: 564269.2999999999",
+                "comment": "Grocery performs moderately with balanced stock and rate.",
+                "suggestion": "Monitor trends to maintain performance."
+            },
+            "furniture": {
+                "total_stock": 1375,
+                "avg_product_rate": 495.74,
+                "total_rate": 757339.76,
+                "content": "Category furniture: Total stock: 1375, Average product rate: 495.741, Total rate: 757339.76",
+                "comment": "Furniture performs moderately with balanced stock and rate.",
+                "suggestion": "Monitor trends to maintain performance."
+            },
+            "electronics": {
+                "total_stock": 1365,
+                "avg_product_rate": 495.11,
+                "total_rate": 641387.32,
+                "content": "Category electronics: Total stock: 1365, Average product rate: 495.11499999999995, Total rate: 641387.32",
+                "comment": "Electronics performs moderately with balanced stock and rate.",
+                "suggestion": "Monitor trends to maintain performance."
+            },
+            "clothing": {
+                "total_stock": 1087,
+                "avg_product_rate": 286.8,
+                "total_rate": 301380.85,
+                "content": "Category clothing: Total stock: 1087, Average product rate: 286.795, Total rate: 301380.85",
+                "comment": "Clothing has lower rates; consider revising pricing or promotions.",
+                "suggestion": "Introduce discounts or bundles to improve sales."
+            },
+            "beverages": {
+                "total_stock": 1005,
+                "avg_product_rate": 555.01,
+                "total_rate": 527214.89,
+                "content": "Category beverages: Total stock: 1005, Average product rate: 555.0060000000001, Total rate: 527214.89",
+                "comment": "Beverages shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            }
+        },
+        "content": "Summary for NYC-001: Total stock: 5869, Average product rate: 464.49899999999997, Total rate: 2791592.12",
+        "performance_metrics": {
+            "overall_comment": "This store performs well in furniture but underperforms in clothing.",
+            "comparison": "This warehouse outperforms others in total stock and total rate.",
+            "low_stock_alerts": [],
+            "restock_suggestions": [],
+            "overstock_warnings": []
+        },
+        "region": "NYC"
+    },
+    "NYC-002": {
+        "total_stock": 5954,
+        "avg_product_rate": 481.54,
+        "total_rate": 2703430.41,
+        "categories": {
+            "clothing": {
+                "total_stock": 992,
+                "avg_product_rate": 462.17,
+                "total_rate": 347593.94,
+                "content": "Category clothing: Total stock: 992, Average product rate: 462.172, Total rate: 347593.93999999994",
+                "comment": "Clothing performs moderately with balanced stock and rate.",
+                "suggestion": "Monitor trends to maintain performance."
+            },
+            "electronics": {
+                "total_stock": 1080,
+                "avg_product_rate": 473.65,
+                "total_rate": 467638.23,
+                "content": "Category electronics: Total stock: 1080, Average product rate: 473.651, Total rate: 467638.23",
+                "comment": "Electronics performs moderately with balanced stock and rate.",
+                "suggestion": "Monitor trends to maintain performance."
+            },
+            "grocery": {
+                "total_stock": 1265,
+                "avg_product_rate": 394.2,
+                "total_rate": 457465.68,
+                "content": "Category grocery: Total stock: 1265, Average product rate: 394.2, Total rate: 457465.68000000005",
+                "comment": "Grocery has lower rates; consider revising pricing or promotions.",
+                "suggestion": "Introduce discounts or bundles to improve sales."
+            },
+            "beverages": {
+                "total_stock": 1381,
+                "avg_product_rate": 501.51,
+                "total_rate": 684545.36,
+                "content": "Category beverages: Total stock: 1381, Average product rate: 501.50999999999993, Total rate: 684545.3599999999",
+                "comment": "Beverages shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "furniture": {
+                "total_stock": 1236,
+                "avg_product_rate": 576.17,
+                "total_rate": 746187.2,
+                "content": "Category furniture: Total stock: 1236, Average product rate: 576.168, Total rate: 746187.2",
+                "comment": "Furniture shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            }
+        },
+        "content": "Summary for NYC-002: Total stock: 5954, Average product rate: 481.54019999999997, Total rate: 2703430.41",
+        "performance_metrics": {
+            "overall_comment": "This store performs well in furniture but underperforms in clothing.",
+            "comparison": "This warehouse outperforms others in total stock and total rate.",
+            "low_stock_alerts": [],
+            "restock_suggestions": [
+                "clothing"
+            ],
+            "overstock_warnings": []
+        },
+        "region": "NYC"
+    },
+    "NYC-003": {
+        "total_stock": 5326,
+        "avg_product_rate": 497.76,
+        "total_rate": 2690241.84,
+        "categories": {
+            "electronics": {
+                "total_stock": 1006,
+                "avg_product_rate": 422.07,
+                "total_rate": 468770.64,
+                "content": "Category electronics: Total stock: 1006, Average product rate: 422.075, Total rate: 468770.6400000001",
+                "comment": "Electronics performs moderately with balanced stock and rate.",
+                "suggestion": "Monitor trends to maintain performance."
+            },
+            "grocery": {
+                "total_stock": 1238,
+                "avg_product_rate": 349.2,
+                "total_rate": 433322.75,
+                "content": "Category grocery: Total stock: 1238, Average product rate: 349.198, Total rate: 433322.75",
+                "comment": "Grocery has lower rates; consider revising pricing or promotions.",
+                "suggestion": "Introduce discounts or bundles to improve sales."
+            },
+            "beverages": {
+                "total_stock": 1163,
+                "avg_product_rate": 457.47,
+                "total_rate": 511482.77,
+                "content": "Category beverages: Total stock: 1163, Average product rate: 457.4709999999999, Total rate: 511482.77",
+                "comment": "Beverages performs moderately with balanced stock and rate.",
+                "suggestion": "Monitor trends to maintain performance."
+            },
+            "furniture": {
+                "total_stock": 1060,
+                "avg_product_rate": 577.24,
+                "total_rate": 634855.1,
+                "content": "Category furniture: Total stock: 1060, Average product rate: 577.237, Total rate: 634855.1",
+                "comment": "Furniture shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "clothing": {
+                "total_stock": 859,
+                "avg_product_rate": 682.81,
+                "total_rate": 641810.58,
+                "content": "Category clothing: Total stock: 859, Average product rate: 682.8050000000001, Total rate: 641810.5800000001",
+                "comment": "Clothing shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            }
+        },
+        "content": "Summary for NYC-003: Total stock: 5326, Average product rate: 497.75719999999995, Total rate: 2690241.8400000003",
+        "performance_metrics": {
+            "overall_comment": "This store performs well in clothing but underperforms in grocery.",
+            "comparison": "This warehouse performs slightly below average compared to others.",
+            "low_stock_alerts": [],
+            "restock_suggestions": [
+                "clothing"
+            ],
+            "overstock_warnings": []
+        },
+        "region": "NYC"
+    },
+    "LA-001": {
+        "total_stock": 5185,
+        "avg_product_rate": 435.69,
+        "total_rate": 2351805.31,
+        "categories": {
+            "electronics": {
+                "total_stock": 949,
+                "avg_product_rate": 455.37,
+                "total_rate": 450328.22,
+                "content": "Category electronics: Total stock: 949, Average product rate: 455.36800000000005, Total rate: 450328.22",
+                "comment": "Electronics performs moderately with balanced stock and rate.",
+                "suggestion": "Monitor trends to maintain performance."
+            },
+            "grocery": {
+                "total_stock": 972,
+                "avg_product_rate": 401.59,
+                "total_rate": 454486.21,
+                "content": "Category grocery: Total stock: 972, Average product rate: 401.59299999999996, Total rate: 454486.21",
+                "comment": "Grocery performs moderately with balanced stock and rate.",
+                "suggestion": "Monitor trends to maintain performance."
+            },
+            "beverages": {
+                "total_stock": 969,
+                "avg_product_rate": 545.23,
+                "total_rate": 518709.44,
+                "content": "Category beverages: Total stock: 969, Average product rate: 545.234, Total rate: 518709.44",
+                "comment": "Beverages shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "furniture": {
+                "total_stock": 1231,
+                "avg_product_rate": 392.36,
+                "total_rate": 520128.43,
+                "content": "Category furniture: Total stock: 1231, Average product rate: 392.35599999999994, Total rate: 520128.43",
+                "comment": "Furniture has lower rates; consider revising pricing or promotions.",
+                "suggestion": "Introduce discounts or bundles to improve sales."
+            },
+            "clothing": {
+                "total_stock": 1064,
+                "avg_product_rate": 383.9,
+                "total_rate": 408153.01,
+                "content": "Category clothing: Total stock: 1064, Average product rate: 383.90400000000005, Total rate: 408153.01",
+                "comment": "Clothing has lower rates; consider revising pricing or promotions.",
+                "suggestion": "Introduce discounts or bundles to improve sales."
+            }
+        },
+        "content": "Summary for LA-001: Total stock: 5185, Average product rate: 435.69100000000003, Total rate: 2351805.31",
+        "performance_metrics": {
+            "overall_comment": "This store performs well in furniture but underperforms in clothing.",
+            "comparison": "This warehouse performs slightly below average compared to others.",
+            "low_stock_alerts": [],
+            "restock_suggestions": [
+                "electronics",
+                "grocery",
+                "beverages"
+            ],
+            "overstock_warnings": []
+        },
+        "region": "LA"
+    },
+    "LA-002": {
+        "total_stock": 5904,
+        "avg_product_rate": 543.11,
+        "total_rate": 3390695.68,
+        "categories": {
+            "clothing": {
+                "total_stock": 1035,
+                "avg_product_rate": 530.93,
+                "total_rate": 662415.09,
+                "content": "Category clothing: Total stock: 1035, Average product rate: 530.9300000000001, Total rate: 662415.09",
+                "comment": "Clothing shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "grocery": {
+                "total_stock": 1191,
+                "avg_product_rate": 426.99,
+                "total_rate": 513522.61,
+                "content": "Category grocery: Total stock: 1191, Average product rate: 426.994, Total rate: 513522.61",
+                "comment": "Grocery performs moderately with balanced stock and rate.",
+                "suggestion": "Monitor trends to maintain performance."
+            },
+            "electronics": {
+                "total_stock": 1333,
+                "avg_product_rate": 484.23,
+                "total_rate": 700042.73,
+                "content": "Category electronics: Total stock: 1333, Average product rate: 484.227, Total rate: 700042.73",
+                "comment": "Electronics performs moderately with balanced stock and rate.",
+                "suggestion": "Monitor trends to maintain performance."
+            },
+            "furniture": {
+                "total_stock": 1153,
+                "avg_product_rate": 500.67,
+                "total_rate": 555134.65,
+                "content": "Category furniture: Total stock: 1153, Average product rate: 500.671, Total rate: 555134.65",
+                "comment": "Furniture shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "beverages": {
+                "total_stock": 1192,
+                "avg_product_rate": 772.73,
+                "total_rate": 959580.6,
+                "content": "Category beverages: Total stock: 1192, Average product rate: 772.727, Total rate: 959580.6",
+                "comment": "Beverages shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            }
+        },
+        "content": "Summary for LA-002: Total stock: 5904, Average product rate: 543.1098, Total rate: 3390695.6799999997",
+        "performance_metrics": {
+            "overall_comment": "This store performs well in beverages but underperforms in grocery.",
+            "comparison": "This warehouse outperforms others in total stock and total rate.",
+            "low_stock_alerts": [],
+            "restock_suggestions": [],
+            "overstock_warnings": []
+        },
+        "region": "LA"
+    },
+    "LA-003": {
+        "total_stock": 5482,
+        "avg_product_rate": 555.53,
+        "total_rate": 3077793.3,
+        "categories": {
+            "furniture": {
+                "total_stock": 1368,
+                "avg_product_rate": 532.31,
+                "total_rate": 814667.21,
+                "content": "Category furniture: Total stock: 1368, Average product rate: 532.3080000000001, Total rate: 814667.2100000001",
+                "comment": "Furniture shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "electronics": {
+                "total_stock": 1189,
+                "avg_product_rate": 551.44,
+                "total_rate": 635484.41,
+                "content": "Category electronics: Total stock: 1189, Average product rate: 551.4440000000001, Total rate: 635484.41",
+                "comment": "Electronics shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "grocery": {
+                "total_stock": 981,
+                "avg_product_rate": 578.99,
+                "total_rate": 601634.28,
+                "content": "Category grocery: Total stock: 981, Average product rate: 578.985, Total rate: 601634.2799999999",
+                "comment": "Grocery shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "clothing": {
+                "total_stock": 1152,
+                "avg_product_rate": 473.83,
+                "total_rate": 547482.18,
+                "content": "Category clothing: Total stock: 1152, Average product rate: 473.831, Total rate: 547482.1799999999",
+                "comment": "Clothing performs moderately with balanced stock and rate.",
+                "suggestion": "Monitor trends to maintain performance."
+            },
+            "beverages": {
+                "total_stock": 792,
+                "avg_product_rate": 641.07,
+                "total_rate": 478525.22,
+                "content": "Category beverages: Total stock: 792, Average product rate: 641.071, Total rate: 478525.22",
+                "comment": "Beverages shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            }
+        },
+        "content": "Summary for LA-003: Total stock: 5482, Average product rate: 555.5278, Total rate: 3077793.3",
+        "performance_metrics": {
+            "overall_comment": "This store performs well in furniture but underperforms in beverages.",
+            "comparison": "This warehouse performs slightly below average compared to others.",
+            "low_stock_alerts": [],
+            "restock_suggestions": [
+                "grocery",
+                "beverages"
+            ],
+            "overstock_warnings": []
+        },
+        "region": "LA"
+    },
+    "CHI-001": {
+        "total_stock": 5988,
+        "avg_product_rate": 457.61,
+        "total_rate": 2916885.24,
+        "categories": {
+            "clothing": {
+                "total_stock": 1055,
+                "avg_product_rate": 414.99,
+                "total_rate": 436654.18,
+                "content": "Category clothing: Total stock: 1055, Average product rate: 414.991, Total rate: 436654.18",
+                "comment": "Clothing performs moderately with balanced stock and rate.",
+                "suggestion": "Monitor trends to maintain performance."
+            },
+            "beverages": {
+                "total_stock": 1277,
+                "avg_product_rate": 358.25,
+                "total_rate": 498600.7,
+                "content": "Category beverages: Total stock: 1277, Average product rate: 358.251, Total rate: 498600.69999999995",
+                "comment": "Beverages has lower rates; consider revising pricing or promotions.",
+                "suggestion": "Introduce discounts or bundles to improve sales."
+            },
+            "grocery": {
+                "total_stock": 1237,
+                "avg_product_rate": 525.03,
+                "total_rate": 702749.13,
+                "content": "Category grocery: Total stock: 1237, Average product rate: 525.029, Total rate: 702749.13",
+                "comment": "Grocery shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "furniture": {
+                "total_stock": 1263,
+                "avg_product_rate": 537.66,
+                "total_rate": 696108.13,
+                "content": "Category furniture: Total stock: 1263, Average product rate: 537.664, Total rate: 696108.13",
+                "comment": "Furniture shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "electronics": {
+                "total_stock": 1156,
+                "avg_product_rate": 452.13,
+                "total_rate": 582773.1,
+                "content": "Category electronics: Total stock: 1156, Average product rate: 452.134, Total rate: 582773.1000000001",
+                "comment": "Electronics performs moderately with balanced stock and rate.",
+                "suggestion": "Monitor trends to maintain performance."
+            }
+        },
+        "content": "Summary for CHI-001: Total stock: 5988, Average product rate: 457.61379999999997, Total rate: 2916885.2399999998",
+        "performance_metrics": {
+            "overall_comment": "This store performs well in grocery but underperforms in clothing.",
+            "comparison": "This warehouse outperforms others in total stock and total rate.",
+            "low_stock_alerts": [],
+            "restock_suggestions": [],
+            "overstock_warnings": []
+        },
+        "region": "CHI"
+    },
+    "CHI-002": {
+        "total_stock": 5471,
+        "avg_product_rate": 527.6,
+        "total_rate": 2694374.96,
+        "categories": {
+            "clothing": {
+                "total_stock": 1129,
+                "avg_product_rate": 501.88,
+                "total_rate": 524924.56,
+                "content": "Category clothing: Total stock: 1129, Average product rate: 501.88499999999993, Total rate: 524924.56",
+                "comment": "Clothing shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "grocery": {
+                "total_stock": 852,
+                "avg_product_rate": 557.43,
+                "total_rate": 440142.06,
+                "content": "Category grocery: Total stock: 852, Average product rate: 557.434, Total rate: 440142.06",
+                "comment": "Grocery shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "furniture": {
+                "total_stock": 717,
+                "avg_product_rate": 580.38,
+                "total_rate": 425561.63,
+                "content": "Category furniture: Total stock: 717, Average product rate: 580.384, Total rate: 425561.63",
+                "comment": "Furniture shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "beverages": {
+                "total_stock": 1306,
+                "avg_product_rate": 542.17,
+                "total_rate": 737746.83,
+                "content": "Category beverages: Total stock: 1306, Average product rate: 542.168, Total rate: 737746.83",
+                "comment": "Beverages shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "electronics": {
+                "total_stock": 1467,
+                "avg_product_rate": 456.14,
+                "total_rate": 565999.88,
+                "content": "Category electronics: Total stock: 1467, Average product rate: 456.13599999999997, Total rate: 565999.88",
+                "comment": "Electronics performs moderately with balanced stock and rate.",
+                "suggestion": "Monitor trends to maintain performance."
+            }
+        },
+        "content": "Summary for CHI-002: Total stock: 5471, Average product rate: 527.6014, Total rate: 2694374.9600000004",
+        "performance_metrics": {
+            "overall_comment": "This store performs well in beverages but underperforms in furniture.",
+            "comparison": "This warehouse performs slightly below average compared to others.",
+            "low_stock_alerts": [],
+            "restock_suggestions": [
+                "grocery",
+                "furniture"
+            ],
+            "overstock_warnings": []
+        },
+        "region": "CHI"
+    },
+    "CHI-003": {
+        "total_stock": 5433,
+        "avg_product_rate": 433.25,
+        "total_rate": 2425063.01,
+        "categories": {
+            "electronics": {
+                "total_stock": 1003,
+                "avg_product_rate": 377.96,
+                "total_rate": 391351.6,
+                "content": "Category electronics: Total stock: 1003, Average product rate: 377.96099999999996, Total rate: 391351.6",
+                "comment": "Electronics has lower rates; consider revising pricing or promotions.",
+                "suggestion": "Introduce discounts or bundles to improve sales."
+            },
+            "beverages": {
+                "total_stock": 1119,
+                "avg_product_rate": 443.82,
+                "total_rate": 536676.96,
+                "content": "Category beverages: Total stock: 1119, Average product rate: 443.8160000000001, Total rate: 536676.9599999998",
+                "comment": "Beverages performs moderately with balanced stock and rate.",
+                "suggestion": "Monitor trends to maintain performance."
+            },
+            "clothing": {
+                "total_stock": 999,
+                "avg_product_rate": 394.71,
+                "total_rate": 338998.73,
+                "content": "Category clothing: Total stock: 999, Average product rate: 394.706, Total rate: 338998.73",
+                "comment": "Clothing has lower rates; consider revising pricing or promotions.",
+                "suggestion": "Introduce discounts or bundles to improve sales."
+            },
+            "grocery": {
+                "total_stock": 1303,
+                "avg_product_rate": 582.26,
+                "total_rate": 721474.56,
+                "content": "Category grocery: Total stock: 1303, Average product rate: 582.262, Total rate: 721474.56",
+                "comment": "Grocery shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "furniture": {
+                "total_stock": 1009,
+                "avg_product_rate": 367.5,
+                "total_rate": 436561.16,
+                "content": "Category furniture: Total stock: 1009, Average product rate: 367.505, Total rate: 436561.16",
+                "comment": "Furniture has lower rates; consider revising pricing or promotions.",
+                "suggestion": "Introduce discounts or bundles to improve sales."
+            }
+        },
+        "content": "Summary for CHI-003: Total stock: 5433, Average product rate: 433.24999999999994, Total rate: 2425063.0099999993",
+        "performance_metrics": {
+            "overall_comment": "This store performs well in grocery but underperforms in clothing.",
+            "comparison": "This warehouse performs slightly below average compared to others.",
+            "low_stock_alerts": [],
+            "restock_suggestions": [
+                "clothing"
+            ],
+            "overstock_warnings": []
+        },
+        "region": "CHI"
+    },
+    "HOU-001": {
+        "total_stock": 5470,
+        "avg_product_rate": 487.53,
+        "total_rate": 2800827.34,
+        "categories": {
+            "furniture": {
+                "total_stock": 1082,
+                "avg_product_rate": 587.28,
+                "total_rate": 673959.94,
+                "content": "Category furniture: Total stock: 1082, Average product rate: 587.2839999999999, Total rate: 673959.94",
+                "comment": "Furniture shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "beverages": {
+                "total_stock": 1041,
+                "avg_product_rate": 383.96,
+                "total_rate": 522766.09,
+                "content": "Category beverages: Total stock: 1041, Average product rate: 383.95500000000004, Total rate: 522766.08999999997",
+                "comment": "Beverages has lower rates; consider revising pricing or promotions.",
+                "suggestion": "Introduce discounts or bundles to improve sales."
+            },
+            "electronics": {
+                "total_stock": 980,
+                "avg_product_rate": 595.04,
+                "total_rate": 565620.27,
+                "content": "Category electronics: Total stock: 980, Average product rate: 595.0440000000001, Total rate: 565620.2699999999",
+                "comment": "Electronics shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "grocery": {
+                "total_stock": 1240,
+                "avg_product_rate": 483.87,
+                "total_rate": 637816.54,
+                "content": "Category grocery: Total stock: 1240, Average product rate: 483.866, Total rate: 637816.54",
+                "comment": "Grocery performs moderately with balanced stock and rate.",
+                "suggestion": "Monitor trends to maintain performance."
+            },
+            "clothing": {
+                "total_stock": 1127,
+                "avg_product_rate": 387.48,
+                "total_rate": 400664.5,
+                "content": "Category clothing: Total stock: 1127, Average product rate: 387.477, Total rate: 400664.5",
+                "comment": "Clothing has lower rates; consider revising pricing or promotions.",
+                "suggestion": "Introduce discounts or bundles to improve sales."
+            }
+        },
+        "content": "Summary for HOU-001: Total stock: 5470, Average product rate: 487.5252, Total rate: 2800827.3399999994",
+        "performance_metrics": {
+            "overall_comment": "This store performs well in furniture but underperforms in clothing.",
+            "comparison": "This warehouse performs slightly below average compared to others.",
+            "low_stock_alerts": [],
+            "restock_suggestions": [
+                "electronics"
+            ],
+            "overstock_warnings": []
+        },
+        "region": "HOU"
+    },
+    "HOU-002": {
+        "total_stock": 5186,
+        "avg_product_rate": 588.48,
+        "total_rate": 2984658.16,
+        "categories": {
+            "clothing": {
+                "total_stock": 964,
+                "avg_product_rate": 652.1,
+                "total_rate": 561608.16,
+                "content": "Category clothing: Total stock: 964, Average product rate: 652.1009999999999, Total rate: 561608.16",
+                "comment": "Clothing shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "grocery": {
+                "total_stock": 1377,
+                "avg_product_rate": 575.21,
+                "total_rate": 778907.88,
+                "content": "Category grocery: Total stock: 1377, Average product rate: 575.2059999999999, Total rate: 778907.88",
+                "comment": "Grocery shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "electronics": {
+                "total_stock": 981,
+                "avg_product_rate": 693.23,
+                "total_rate": 651210.77,
+                "content": "Category electronics: Total stock: 981, Average product rate: 693.232, Total rate: 651210.77",
+                "comment": "Electronics shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "beverages": {
+                "total_stock": 1102,
+                "avg_product_rate": 468.31,
+                "total_rate": 563227.8,
+                "content": "Category beverages: Total stock: 1102, Average product rate: 468.30699999999996, Total rate: 563227.8",
+                "comment": "Beverages performs moderately with balanced stock and rate.",
+                "suggestion": "Monitor trends to maintain performance."
+            },
+            "furniture": {
+                "total_stock": 762,
+                "avg_product_rate": 553.57,
+                "total_rate": 429703.55,
+                "content": "Category furniture: Total stock: 762, Average product rate: 553.572, Total rate: 429703.55000000005",
+                "comment": "Furniture shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            }
+        },
+        "content": "Summary for HOU-002: Total stock: 5186, Average product rate: 588.4835999999999, Total rate: 2984658.16",
+        "performance_metrics": {
+            "overall_comment": "This store performs well in grocery but underperforms in furniture.",
+            "comparison": "This warehouse performs slightly below average compared to others.",
+            "low_stock_alerts": [],
+            "restock_suggestions": [
+                "clothing",
+                "electronics",
+                "furniture"
+            ],
+            "overstock_warnings": []
+        },
+        "region": "HOU"
+    },
+    "HOU-003": {
+        "total_stock": 5360,
+        "avg_product_rate": 515.2,
+        "total_rate": 2878559.6,
+        "categories": {
+            "electronics": {
+                "total_stock": 1080,
+                "avg_product_rate": 563.68,
+                "total_rate": 604920.04,
+                "content": "Category electronics: Total stock: 1080, Average product rate: 563.677, Total rate: 604920.0399999999",
+                "comment": "Electronics shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "clothing": {
+                "total_stock": 1013,
+                "avg_product_rate": 498.01,
+                "total_rate": 447870.0,
+                "content": "Category clothing: Total stock: 1013, Average product rate: 498.015, Total rate: 447869.99999999994",
+                "comment": "Clothing performs moderately with balanced stock and rate.",
+                "suggestion": "Monitor trends to maintain performance."
+            },
+            "grocery": {
+                "total_stock": 1153,
+                "avg_product_rate": 413.51,
+                "total_rate": 534089.89,
+                "content": "Category grocery: Total stock: 1153, Average product rate: 413.508, Total rate: 534089.8899999999",
+                "comment": "Grocery performs moderately with balanced stock and rate.",
+                "suggestion": "Monitor trends to maintain performance."
+            },
+            "beverages": {
+                "total_stock": 920,
+                "avg_product_rate": 514.95,
+                "total_rate": 502758.31,
+                "content": "Category beverages: Total stock: 920, Average product rate: 514.9510000000001, Total rate: 502758.31",
+                "comment": "Beverages shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "furniture": {
+                "total_stock": 1194,
+                "avg_product_rate": 585.86,
+                "total_rate": 788921.36,
+                "content": "Category furniture: Total stock: 1194, Average product rate: 585.8619999999999, Total rate: 788921.36",
+                "comment": "Furniture shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            }
+        },
+        "content": "Summary for HOU-003: Total stock: 5360, Average product rate: 515.2026000000001, Total rate: 2878559.6",
+        "performance_metrics": {
+            "overall_comment": "This store performs well in furniture but underperforms in clothing.",
+            "comparison": "This warehouse performs slightly below average compared to others.",
+            "low_stock_alerts": [],
+            "restock_suggestions": [
+                "beverages"
+            ],
+            "overstock_warnings": []
+        },
+        "region": "HOU"
+    },
+    "SF-001": {
+        "total_stock": 5610,
+        "avg_product_rate": 546.94,
+        "total_rate": 2946647.46,
+        "categories": {
+            "grocery": {
+                "total_stock": 989,
+                "avg_product_rate": 384.69,
+                "total_rate": 312736.82,
+                "content": "Category grocery: Total stock: 989, Average product rate: 384.69, Total rate: 312736.82000000007",
+                "comment": "Grocery has lower rates; consider revising pricing or promotions.",
+                "suggestion": "Introduce discounts or bundles to improve sales."
+            },
+            "clothing": {
+                "total_stock": 1054,
+                "avg_product_rate": 686.07,
+                "total_rate": 794226.64,
+                "content": "Category clothing: Total stock: 1054, Average product rate: 686.0720000000001, Total rate: 794226.64",
+                "comment": "Clothing shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "furniture": {
+                "total_stock": 1459,
+                "avg_product_rate": 557.38,
+                "total_rate": 868011.76,
+                "content": "Category furniture: Total stock: 1459, Average product rate: 557.382, Total rate: 868011.76",
+                "comment": "Furniture shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "beverages": {
+                "total_stock": 1050,
+                "avg_product_rate": 588.2,
+                "total_rate": 543261.46,
+                "content": "Category beverages: Total stock: 1050, Average product rate: 588.198, Total rate: 543261.46",
+                "comment": "Beverages shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "electronics": {
+                "total_stock": 1058,
+                "avg_product_rate": 518.37,
+                "total_rate": 428410.78,
+                "content": "Category electronics: Total stock: 1058, Average product rate: 518.374, Total rate: 428410.78",
+                "comment": "Electronics shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            }
+        },
+        "content": "Summary for SF-001: Total stock: 5610, Average product rate: 546.9431999999999, Total rate: 2946647.4600000004",
+        "performance_metrics": {
+            "overall_comment": "This store performs well in furniture but underperforms in grocery.",
+            "comparison": "This warehouse outperforms others in total stock and total rate.",
+            "low_stock_alerts": [],
+            "restock_suggestions": [
+                "grocery"
+            ],
+            "overstock_warnings": []
+        },
+        "region": "SF"
+    },
+    "SF-002": {
+        "total_stock": 4698,
+        "avg_product_rate": 543.27,
+        "total_rate": 2393048.18,
+        "categories": {
+            "furniture": {
+                "total_stock": 933,
+                "avg_product_rate": 562.56,
+                "total_rate": 509667.35,
+                "content": "Category furniture: Total stock: 933, Average product rate: 562.556, Total rate: 509667.35",
+                "comment": "Furniture shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "grocery": {
+                "total_stock": 688,
+                "avg_product_rate": 610.59,
+                "total_rate": 391052.65,
+                "content": "Category grocery: Total stock: 688, Average product rate: 610.587, Total rate: 391052.65",
+                "comment": "Grocery shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "beverages": {
+                "total_stock": 943,
+                "avg_product_rate": 469.97,
+                "total_rate": 395296.82,
+                "content": "Category beverages: Total stock: 943, Average product rate: 469.96900000000005, Total rate: 395296.82",
+                "comment": "Beverages performs moderately with balanced stock and rate.",
+                "suggestion": "Monitor trends to maintain performance."
+            },
+            "clothing": {
+                "total_stock": 932,
+                "avg_product_rate": 569.43,
+                "total_rate": 571870.52,
+                "content": "Category clothing: Total stock: 932, Average product rate: 569.431, Total rate: 571870.52",
+                "comment": "Clothing shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "electronics": {
+                "total_stock": 1202,
+                "avg_product_rate": 503.8,
+                "total_rate": 525160.84,
+                "content": "Category electronics: Total stock: 1202, Average product rate: 503.803, Total rate: 525160.84",
+                "comment": "Electronics shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            }
+        },
+        "content": "Summary for SF-002: Total stock: 4698, Average product rate: 543.2692000000001, Total rate: 2393048.18",
+        "performance_metrics": {
+            "overall_comment": "This store performs well in clothing but underperforms in grocery.",
+            "comparison": "This warehouse performs slightly below average compared to others.",
+            "low_stock_alerts": [],
+            "restock_suggestions": [
+                "furniture",
+                "grocery",
+                "beverages",
+                "clothing"
+            ],
+            "overstock_warnings": []
+        },
+        "region": "SF"
+    },
+    "SF-003": {
+        "total_stock": 6191,
+        "avg_product_rate": 467.75,
+        "total_rate": 2988348.04,
+        "categories": {
+            "clothing": {
+                "total_stock": 1102,
+                "avg_product_rate": 489.24,
+                "total_rate": 514817.23,
+                "content": "Category clothing: Total stock: 1102, Average product rate: 489.242, Total rate: 514817.2300000001",
+                "comment": "Clothing performs moderately with balanced stock and rate.",
+                "suggestion": "Monitor trends to maintain performance."
+            },
+            "furniture": {
+                "total_stock": 1226,
+                "avg_product_rate": 550.88,
+                "total_rate": 684602.22,
+                "content": "Category furniture: Total stock: 1226, Average product rate: 550.875, Total rate: 684602.22",
+                "comment": "Furniture shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "beverages": {
+                "total_stock": 1227,
+                "avg_product_rate": 500.19,
+                "total_rate": 745379.68,
+                "content": "Category beverages: Total stock: 1227, Average product rate: 500.195, Total rate: 745379.68",
+                "comment": "Beverages shows premium pricing with high average rate.",
+                "suggestion": "Capitalize on premium pricing by marketing exclusivity."
+            },
+            "electronics": {
+                "total_stock": 951,
+                "avg_product_rate": 416.78,
+                "total_rate": 397073.84,
+                "content": "Category electronics: Total stock: 951, Average product rate: 416.78099999999995, Total rate: 397073.8400000001",
+                "comment": "Electronics performs moderately with balanced stock and rate.",
+                "suggestion": "Monitor trends to maintain performance."
+            },
+            "grocery": {
+                "total_stock": 1685,
+                "avg_product_rate": 381.64,
+                "total_rate": 646475.07,
+                "content": "Category grocery: Total stock: 1685, Average product rate: 381.64099999999996, Total rate: 646475.07",
+                "comment": "Grocery has lower rates; consider revising pricing or promotions.",
+                "suggestion": "Introduce discounts or bundles to improve sales."
+            }
+        },
+        "content": "Summary for SF-003: Total stock: 6191, Average product rate: 467.74679999999995, Total rate: 2988348.0399999996",
+        "performance_metrics": {
+            "overall_comment": "This store performs well in beverages but underperforms in electronics.",
+            "comparison": "This warehouse outperforms others in total stock and total rate.",
+            "low_stock_alerts": [],
+            "restock_suggestions": [
+                "electronics"
+            ],
+            "overstock_warnings": [
+                "grocery"
+            ]
+        },
+        "region": "SF"
+    },
+    "regions": {
+        "NYC": {
+            "stores": [
+                "NYC-001",
+                "NYC-002",
+                "NYC-003"
+            ],
+            "total_stock": 17149,
+            "avg_product_rate": 477.3,
+            "total_rate": 8185264.37,
+            "top_performing_category": "furniture"
+        },
+        "LA": {
+            "stores": [
+                "LA-001",
+                "LA-002",
+                "LA-003"
+            ],
+            "total_stock": 16571,
+            "avg_product_rate": 532.27,
+            "total_rate": 8820294.29,
+            "top_performing_category": "furniture"
+        },
+        "CHI": {
+            "stores": [
+                "CHI-001",
+                "CHI-002",
+                "CHI-003"
+            ],
+            "total_stock": 16892,
+            "avg_product_rate": 475.75,
+            "total_rate": 8036323.21,
+            "top_performing_category": "furniture"
+        },
+        "HOU": {
+            "stores": [
+                "HOU-001",
+                "HOU-002",
+                "HOU-003"
+            ],
+            "total_stock": 16016,
+            "avg_product_rate": 540.96,
+            "total_rate": 8664045.1,
+            "top_performing_category": "furniture"
+        },
+        "SF": {
+            "stores": [
+                "SF-001",
+                "SF-002",
+                "SF-003"
+            ],
+            "total_stock": 16499,
+            "avg_product_rate": 504.76,
+            "total_rate": 8328043.68,
+            "top_performing_category": "furniture"
+        }
+    }
+}
