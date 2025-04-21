@@ -1,4 +1,6 @@
 from fastapi import FastAPI
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 import numpy as np
 import faiss
@@ -11,6 +13,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
+# Add middleware for CORS if needed
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # You can specify your frontend URL here
@@ -18,6 +21,10 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Serve static files (like HTML, CSS, JS, etc.)
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
 class QueryRequest(BaseModel):
     query: str
 
@@ -84,7 +91,9 @@ async def ask_ollama_async(query: str, context: str, model_name="llama3") -> str
 
 @app.get("/")
 async def root():
-    return {"message": "Welcome to the FastAPI RAG bot!"}
+    # Render the HTML directly as a response
+    with open("static/index.html", "r") as file:
+        return HTMLResponse(file.read())
 
 @app.post("/chat")
 async def chat(request: QueryRequest):
