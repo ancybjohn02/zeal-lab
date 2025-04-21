@@ -22,7 +22,8 @@ class QueryRequest(BaseModel):
     query: str
 
 # Load the knowledge base
-with open("/home/zeal/Documents/6th sem/inventra_v2/RAG/enhanced_knowledge_base.json", "r") as file:
+json_path = os.path.join(os.path.dirname(__file__), "knowledge_base.json")
+with open(json_path, "r") as file:
     knowledge_base = json.load(file)
 
 # Preprocess documents
