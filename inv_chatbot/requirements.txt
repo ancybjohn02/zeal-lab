@@ -5,3 +5,7 @@ hnswlib
 numpy
 uvicorn
 gunicorn
+pydantic
+faiss-cpu
+httpx
+sentence-transformers
