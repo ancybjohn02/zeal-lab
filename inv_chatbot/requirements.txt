@@ -1,5 +1,7 @@
-Flask
+fastapi
 torch
 transformers
 hnswlib
 numpy
+uvicorn
+gunicorn
