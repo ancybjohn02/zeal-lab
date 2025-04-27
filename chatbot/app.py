@@ -4,6 +4,7 @@ from pydantic import BaseModel
 import json
 import uvicorn
 import re
+from fastapi.responses import RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -23,8 +24,14 @@ app.add_middleware(
 
 app.mount("/frontend", StaticFiles(directory="frontend", html=True), name="frontend")
 
+# Redirect root to /frontend
+@app.get("/")
+def redirect_to_frontend():
+    return RedirectResponse(url="/frontend")
+
 class QueryRequest(BaseModel):
     question: str
+
 
 def simple_parser(question):
     # Lowercase question
