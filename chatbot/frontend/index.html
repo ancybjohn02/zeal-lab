@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Knowledge Base Chatbot</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.5/purify.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    .chat-message img {
+      max-width: 100%;
+      border-radius: 0.375rem;
+    }
+    
+    .chat-message pre {
+      background-color: #f3f4f6;
+      padding: 0.75rem;
+      border-radius: 0.375rem;
+      overflow-x: auto;
+      margin: 0.5rem 0;
+    }
+    
+    .chat-message code {
+      font-family: monospace;
+      background-color: #f3f4f6;
+      padding: 0.125rem 0.25rem;
+      border-radius: 0.25rem;
+    }
+    
+    .chat-message table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 0.5rem 0;
+    }
+    
+    .chat-message th, .chat-message td {
+      border: 1px solid #e5e7eb;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    
+    .chat-message th {
+      background-color: #f3f4f6;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #c5c5c5;
+      border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #a3a3a3;
+    }
+
+    @keyframes typing {
+      0% { width: 0; }
+      20% { width: 5px; }
+      40% { width: 10px; }
+      60% { width: 15px; }
+      80% { width: 10px; }
+      100% { width: 0; }
+    }
+    
+    .typing-indicator span {
+      height: 8px;
+      width: 8px;
+      float: left;
+      margin: 0 1px;
+      background-color: #9E9EA1;
+      display: block;
+      border-radius: 50%;
+      opacity: 0.4;
+    }
+    
+    .typing-indicator span:nth-of-type(1) {
+      animation: typing 1s infinite 0s;
+    }
+    
+    .typing-indicator span:nth-of-type(2) {
+      animation: typing 1s infinite 0.25s;
+    }
+    
+    .typing-indicator span:nth-of-type(3) {
+      animation: typing 1s infinite 0.5s;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+  <header class="bg-blue-600 text-white py-4 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+      </svg> Knowledge Base Chatbot</h1>
+      <button id="clear-chat" class="bg-blue-700 hover:bg-blue-800 px-3 py-1 rounded text-sm flex items-center transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+        </svg>
+        Clear Chat
+      </button>
+    </div>
+  </header>
+
+  <main class="flex-grow flex flex-col max-w-4xl mx-auto w-full px-4 py-6">
+    <!-- Welcome Message -->
+    <div id="welcome-message" class="bg-white p-6 rounded-lg shadow-md mb-6">
+      <h2 class="text-xl font-semibold mb-2">Welcome to the Knowledge Base Chatbot! 👋</h2>
+      <p class="text-gray-600 mb-4">I can help you find information from our knowledge base. Feel free to ask questions about:</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+        <button class="example-question bg-blue-50 hover:bg-blue-100 text-blue-700 p-3 rounded-lg text-sm transition-colors">
+          How do I reset my password?
+        </button>
+        <button class="example-question bg-blue-50 hover:bg-blue-100 text-blue-700 p-3 rounded-lg text-sm transition-colors">
+          What are your business hours?
+        </button>
+        <button class="example-question bg-blue-50 hover:bg-blue-100 text-blue-700 p-3 rounded-lg text-sm transition-colors">
+          How do I request a refund?
+        </button>
+      </div>
+    </div>
+
+    <!-- Chat Container -->
+    <div class="bg-white rounded-xl shadow-md flex flex-col flex-grow overflow-hidden">
+      <!-- Chat Messages -->
+      <div id="chat-box" class="flex flex-col space-y-4 overflow-y-auto flex-grow p-4">
+        <!-- Chat messages will be dynamically added here -->
+        <div class="flex justify-center p-4 text-gray-400 text-sm">
+          Start a conversation by typing your question below
+        </div>
+      </div>
+
+      <!-- Input Form -->
+      <div class="border-t border-gray-200 p-4 bg-gray-50">
+        <form id="chat-form" class="flex items-center">
+          <input id="user-input" type="text" placeholder="Ask something..." class="flex-grow p-3 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400" required autocomplete="off">
+          <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-r-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Error Message -->
+    <div id="error-message" class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mt-4 rounded hidden" role="alert">
+      <div class="flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        </svg>
+        <span id="error-text">Something went wrong. Please try again.</span>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-gray-100 border-t border-gray-200 py-4 text-center text-gray-500 text-sm">
+    <div class="max-w-4xl mx-auto px-4">
+      <p>Knowledge Base Chatbot &copy; 2025 | 
+        <button id="toggle-theme" class="text-blue-500 hover:underline">Switch to Dark Mode</button>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // DOM Elements
+    const chatBox = document.getElementById('chat-box');
+    const chatForm = document.getElementById('chat-form');
+    const userInput = document.getElementById('user-input');
+    const errorMessage = document.getElementById('error-message');
+    const errorText = document.getElementById('error-text');
+    const clearChatBtn = document.getElementById('clear-chat');
+    const welcomeMessage = document.getElementById('welcome-message');
+    const toggleThemeBtn = document.getElementById('toggle-theme');
+    const exampleQuestions = document.querySelectorAll('.example-question');
+    
+    // Chat history
+    let chatHistory = [];
+    
+    // Retrieve chat history from local storage
+    function loadChatHistory() {
+      const savedHistory = localStorage.getItem('chatHistory');
+      if (savedHistory) {
+        chatHistory = JSON.parse(savedHistory);
+        // Load previous messages
+        chatBox.innerHTML = ''; // Clear default message
+        chatHistory.forEach(msg => {
+          addMessageToDOM(msg.message, msg.sender, msg.timestamp, false);
+        });
+      }
+    }
+    
+    // Save chat history to local storage
+    function saveChatHistory() {
+      localStorage.setItem('chatHistory', JSON.stringify(chatHistory));
+    }
+    
+    // Format timestamp
+    function getFormattedTime() {
+      const now = new Date();
+      return now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    }
+    
+    // Add message to DOM
+    function addMessageToDOM(message, sender, timestamp = getFormattedTime(), animate = true) {
+      // Hide welcome message when conversation starts
+      if (welcomeMessage.style.display !== 'none') {
+        welcomeMessage.style.display = 'none';
+      }
+      
+      const messageDiv = document.createElement('div');
+      messageDiv.classList.add('flex', sender === 'user' ? 'justify-end' : 'justify-start');
+      
+      if (animate) {
+        messageDiv.style.opacity = '0';
+        messageDiv.style.transform = 'translateY(10px)';
+        messageDiv.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+      }
+      
+      const messageContent = document.createElement('div');
+      messageContent.classList.add('chat-message', 'max-w-xs', 'md:max-w-md', 'lg:max-w-lg', 'rounded-lg', 'shadow-sm', 'p-3', 'flex', 'flex-col');
+      
+      if (sender === 'user') {
+        messageContent.classList.add('bg-blue-500', 'text-white');
+      } else {
+        messageContent.classList.add('bg-gray-100', 'text-gray-800');
+      }
+      
+      // Process message content if it's from the bot (potentially contains markdown)
+      if (sender === 'bot') {
+        // Use DOMPurify to sanitize the HTML after converting markdown
+        const cleanHtml = DOMPurify.sanitize(marked.parse(message));
+        messageContent.innerHTML = cleanHtml;
+      } else {
+        messageContent.textContent = message;
+      }
+      
+      // Add timestamp
+      const timeElement = document.createElement('div');
+      timeElement.classList.add('text-xs', 'mt-1', sender === 'user' ? 'text-blue-200' : 'text-gray-500', 'self-end');
+      timeElement.textContent = timestamp;
+      messageContent.appendChild(timeElement);
+      
+      messageDiv.appendChild(messageContent);
+      chatBox.appendChild(messageDiv);
+      
+      // Animate the message appearance
+      if (animate) {
+        setTimeout(() => {
+          messageDiv.style.opacity = '1';
+          messageDiv.style.transform = 'translateY(0)';
+        }, 10);
+      }
+      
+      // Scroll to bottom
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+    
+    // Add message to chat
+    function addMessage(message, sender) {
+      const timestamp = getFormattedTime();
+      
+      // Add to DOM
+      addMessageToDOM(message, sender, timestamp);
+      
+      // Add to history
+      chatHistory.push({ message, sender, timestamp });
+      saveChatHistory();
+    }
+    
+    // Show typing indicator
+    function showTypingIndicator() {
+      const loadingDiv = document.createElement('div');
+      loadingDiv.id = 'typing-indicator';
+      loadingDiv.classList.add('flex', 'justify-start');
+      
+      const loadingContent = document.createElement('div');
+      loadingContent.classList.add('bg-gray-100', 'text-gray-800', 'p-4', 'rounded-lg', 'shadow-sm', 'flex', 'items-center');
+      
+      const typingIndicator = document.createElement('div');
+      typingIndicator.classList.add('typing-indicator');
+      typingIndicator.innerHTML = `
+        <span></span>
+        <span></span>
+        <span></span>
+      `;
+      
+      loadingContent.appendChild(typingIndicator);
+      loadingDiv.appendChild(loadingContent);
+      chatBox.appendChild(loadingDiv);
+      chatBox.scrollTop = chatBox.scrollHeight;
+      
+      return loadingDiv;
+    }
+    
+    // Remove typing indicator
+    function removeTypingIndicator() {
+      const indicator = document.getElementById('typing-indicator');
+      if (indicator) {
+        chatBox.removeChild(indicator);
+      }
+    }
+    
+    // Handle form submission
+    chatForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const question = userInput.value.trim();
+      if (!question) return;
+      
+      // Add user message
+      addMessage(question, 'user');
+      userInput.value = '';
+      
+      // Show typing indicator
+      showTypingIndicator();
+      
+      try {
+        // Simulated response with delay (replace with actual API call)
+        const response = await fetchBotResponse(question);
+        
+        // Remove typing indicator
+        removeTypingIndicator();
+        
+        // Add bot response
+        addMessage(response.answer, 'bot');
+      } catch (err) {
+        console.error(err);
+        removeTypingIndicator();
+        showError('Failed to get a response. Please try again.');
+      }
+    });
+    
+    // Fetch bot response (simulated)
+    async function fetchBotResponse(question) {
+      // In a real application, replace this with an actual API call
+      try {
+        // Simulate API latency
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        
+        // Simulate API call
+        const response = await fetch('/ask', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ question })
+        });
+        
+        if (!response.ok) {
+          throw new Error('Server response was not ok');
+        }
+        
+        return await response.json();
+      } catch (error) {
+        // For demo purposes, return a fallback response if the API call fails
+        console.error('API call failed:', error);
+        
+        // Sample responses for demonstration
+        const fallbackResponses = {
+          "password": "To reset your password:\n\n1. Go to the login page\n2. Click on 'Forgot Password'\n3. Enter your email address\n4. Follow the instructions sent to your email",
+          "hours": "Our business hours are:\n- Monday to Friday: 9AM - 6PM\n- Saturday: 10AM - 4PM\n- Sunday: Closed\n\nCustomer support is available 24/7 through our chat system.",
+          "refund": "To request a refund:\n\n1. Log into your account\n2. Go to 'Order History'\n3. Select the order you want refunded\n4. Click the 'Request Refund' button\n5. Fill out the form explaining your reason\n\nRefunds typically process within 3-5 business days."
+        };
+        
+        // Check if the question contains any keywords
+        for (const [keyword, response] of Object.entries(fallbackResponses)) {
+          if (question.toLowerCase().includes(keyword)) {
+            return { answer: response };
+          }
+        }
+        
+        // Default fallback response
+        return { 
+          answer: "I'm sorry, I couldn't connect to the knowledge base at the moment. Please try again later or contact support at support@example.com if the problem persists."
+        };
+      }
+    }
+    
+    // Show error message
+    function showError(message) {
+      errorText.textContent = message;
+      errorMessage.classList.remove('hidden');
+      setTimeout(() => {
+        errorMessage.classList.add('hidden');
+      }, 5000);
+    }
+    
+    // Clear chat
+    clearChatBtn.addEventListener('click', () => {
+      // Ask for confirmation
+      if (chatHistory.length > 0 && confirm('Are you sure you want to clear the chat history?')) {
+        chatBox.innerHTML = `
+          <div class="flex justify-center p-4 text-gray-400 text-sm">
+            Start a conversation by typing your question below
+          </div>
+        `;
+        chatHistory = [];
+        localStorage.removeItem('chatHistory');
+        welcomeMessage.style.display = 'block';
+      }
+    });
+    
+    // Example questions
+    exampleQuestions.forEach(btn => {
+      btn.addEventListener('click', () => {
+        userInput.value = btn.textContent.trim();
+        userInput.focus();
+      });
+    });
+    
+    // Toggle theme
+    let darkMode = localStorage.getItem('darkMode') === 'true';
+    
+    function updateTheme() {
+      if (darkMode) {
+        document.documentElement.classList.add('dark');
+        document.body.classList.remove('bg-gray-50');
+        document.body.classList.add('bg-gray-900', 'text-white');
+        toggleThemeBtn.textContent = 'Switch to Light Mode';
+      } else {
+        document.documentElement.classList.remove('dark');
+        document.body.classList.add('bg-gray-50');
+        document.body.classList.remove('bg-gray-900', 'text-white');
+        toggleThemeBtn.textContent = 'Switch to Dark Mode';
+      }
+    }
+    
+    toggleThemeBtn.addEventListener('click', () => {
+      darkMode = !darkMode;
+      localStorage.setItem('darkMode', darkMode);
+      updateTheme();
+    });
+    
+    // Set focus on input field
+    userInput.addEventListener('focus', function() {
+      this.classList.add('ring-2', 'ring-blue-400');
+    });
+    
+    userInput.addEventListener('blur', function() {
+      this.classList.remove('ring-2', 'ring-blue-400');
+    });
+    
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      loadChatHistory();
+      updateTheme();
+      userInput.focus();
+    });
+    
+    // Add keyboard shortcuts
+    document.addEventListener('keydown', (e) => {
+      // Focus on input when pressing / key
+      if (e.key === '/' && document.activeElement !== userInput) {
+        e.preventDefault();
+        userInput.focus();
+      }
+      
+      // Clear input when pressing Escape
+      if (e.key === 'Escape' && document.activeElement === userInput) {
+        userInput.value = '';
+      }
+    });
+  </script>
+
+</body>
+</html>
